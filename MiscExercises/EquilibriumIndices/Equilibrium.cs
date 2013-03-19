@@ -21,7 +21,6 @@ namespace MiscExercises.EquilibriumIndices
                 {
                     return x;
                 }
-
                 LeftSide += A[x];
             }
             return -1;
