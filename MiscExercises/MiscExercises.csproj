@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EquilibriumIndices\Equilibrium.cs" />
     <Compile Include="Recursion\FactorialRecursion.cs" />
     <Compile Include="ListManipulation\ListManipulation.cs" />
     <Compile Include="Main.cs" />
@@ -49,9 +50,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EquilibriumIndices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
