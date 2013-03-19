@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MiscExercises.EquilibriumIndices
 {
-    class Equilibrium
+    public class Equilibrium
     {
+        public static int FirstEquilibrium(int[] A, int N)
+        {
+            return -1;
+        }
     }
 }
