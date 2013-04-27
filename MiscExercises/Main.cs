@@ -11,10 +11,7 @@ namespace MiscExercises
     {
         static void Main(string[] args)
         {
-            //6 = 6,3,10,5,16,8,4,2,1
-            CollatzConjecture NewConjecture = new CollatzConjecture(6);
-            
-            ConsoleListOutput.SingleLine(NewConjecture.Sequence, ",");
+            CollatzSolution();
         }
         static void DisplayResults()
         {
@@ -24,6 +21,14 @@ namespace MiscExercises
 
             ListManipulation.ListManipulationBegin();
             Console.WriteLine("");
+        }
+        static void CollatzSolution()
+        {
+            CollatzConjecture NewConjecture = new CollatzConjecture(6);
+
+            NewConjecture.EnterNewSeedNumber(4);
+
+            ConsoleListOutput.SingleLine(NewConjecture.Sequence, ",");
         }
     }
 }

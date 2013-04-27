@@ -8,16 +8,47 @@ namespace MiscExercises
 {
     class CollatzConjecture
     {
+        # region fields
+
+        /// <summary>
+        /// generated sequence listing from seed number
+        /// </summary>
         public List<long> Sequence { get; private set; }
+        #endregion
+
+        #region constructors
+        /// <summary>
+        /// default parameter value is 1
+        /// </summary>
+        public CollatzConjecture() 
+        {
+            this.BuildConjectureList(1);
+        }
         
-        public CollatzConjecture() { }
-        
+        /// <summary>
+        /// enter starting number to calculate
+        /// </summary>
+        /// <param name="initialNum"></param>
         public CollatzConjecture(long initialNum)
         {
             Sequence = new List<long>();
             BuildConjectureList(initialNum);
         }
+        #endregion
 
+        #region accesible method
+        /// <summary>
+        /// enter new seed number to calculate
+        /// </summary>
+        /// <param name="seedNum"></param>
+        public void EnterNewSeedNumber(long seedNum)
+        {
+            Sequence.Clear();
+            BuildConjectureList(seedNum);
+        }
+        #endregion
+
+        #region private methods
         private void BuildConjectureList(long currentNum)
         {
             while (currentNum > 1)
@@ -41,5 +72,6 @@ namespace MiscExercises
             }
             return result;
         }
+        #endregion
     }
 }
