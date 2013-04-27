@@ -1,5 +1,5 @@
 ﻿using System;
-using MiscExercises.EquilibriumIndices;
+using MiscExercises;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MiscExercisesUnitTests

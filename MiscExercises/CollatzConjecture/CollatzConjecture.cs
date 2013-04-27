@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiscExercises
 {
-    class CollatzConjecture
+    public class CollatzConjecture
     {
         # region fields
 
@@ -22,7 +22,7 @@ namespace MiscExercises
         /// </summary>
         public CollatzConjecture() 
         {
-            this.BuildConjectureList(1);
+            BuildConjectureList(2);
         }
         
         /// <summary>
