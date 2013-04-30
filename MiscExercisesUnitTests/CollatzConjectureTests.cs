@@ -9,10 +9,12 @@ namespace MiscExercisesUnitTests
     [TestClass]
     public class CollatzConjectureTests
     {
+        #region Test Fields
         CollatzConjecture Conjecture;
-        List<long> FirstCompareList = new List<long> 
+        List<long> ConjectureListSeed6 = new List<long> 
             { 6, 3, 10, 5, 16, 8, 4, 2, 1 };
-        List<long> SecondCompareList = new List<long> { 4, 2, 1 };
+        List<long> ConjectureListSeed4 = new List<long> { 4, 2, 1 };
+        #endregion
 
         [TestMethod]
         public void DefaultConstructorCreatesThreeElementList()
@@ -25,14 +27,14 @@ namespace MiscExercisesUnitTests
         public void DefaultConstructorValues()
         {
             Conjecture = new CollatzConjecture();
-            Assert.IsTrue(SecondCompareList.SequenceEqual(Conjecture.Sequence));
+            Assert.IsTrue(ConjectureListSeed4.SequenceEqual(Conjecture.Sequence));
         }
 
         [TestMethod]
         public void CalculatedResults()
         {
             Conjecture = new CollatzConjecture(6);
-            Assert.IsTrue(FirstCompareList.SequenceEqual(Conjecture.Sequence));
+            Assert.IsTrue(ConjectureListSeed6.SequenceEqual(Conjecture.Sequence));
         }
 
         [TestMethod]
@@ -40,7 +42,7 @@ namespace MiscExercisesUnitTests
         {
             Conjecture = new CollatzConjecture(6);
             Conjecture.EnterNewSeedNumber(4);
-            Assert.IsTrue(SecondCompareList.SequenceEqual(Conjecture.Sequence));
+            Assert.IsTrue(ConjectureListSeed4.SequenceEqual(Conjecture.Sequence));
         }
     }
 }
