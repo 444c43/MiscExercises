@@ -24,11 +24,9 @@ namespace MiscExercises
         }
         static void CollatzSolution()
         {
-            CollatzConjecture NewConjecture = new CollatzConjecture(6);
-
-            NewConjecture.EnterNewSeedNumber(4);
-
-            ConsoleListOutput.SingleLine(NewConjecture.Sequence, ",");
+            CollatzConjecture NewConjecture = new CollatzConjecture(27);
+            ConsoleListOutput.WrapSingleLine(NewConjecture.Sequence, ", ");
+            Console.WriteLine("Total sequence count: {0}", NewConjecture.Sequence.Count);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace MiscExercises
 
         #region constructors
         /// <summary>
-        /// default parameter value is 1
+        /// default parameter value is 4
         /// </summary>
         public CollatzConjecture() :this(4){}
         

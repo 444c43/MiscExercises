@@ -8,17 +8,21 @@ namespace Output
 {
     class ConsoleListOutput
     {
-        public static void SingleLine(List<long> list, string separator)
+        /// <summary>
+        /// prints to console, including a separator (characters and spaces)
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="separator"></param>
+        public static void WrapSingleLine<T>(List<T> list, string separator)
         {
-            for (int x = 0; x <= list.Count - 1; x++)
+            for (int index = 0; index < list.Count; index++)
             {
-                Console.Write(list[x]);
-                if (x != list.Count - 1)
+                Console.Write(list[index]);
+                if (index != list.Count - 1)
                 {
-                    Console.Write(separator + " ");
+                    Console.Write(separator);
                 }
             }
-
             Console.WriteLine();
         }
 
