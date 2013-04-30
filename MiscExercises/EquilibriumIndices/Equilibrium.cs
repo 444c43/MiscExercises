@@ -8,24 +8,25 @@ namespace MiscExercises
 {
     public class Equilibrium
     {
-        public static int FindFirst(int[] A)
+        public static int FindFirstEquilibrium(int[] A)
         {
-            long RightSide = 0;
-            foreach (int element in A)
-            {
-                RightSide += element;
-            }
+            long RightSide = A.Sum();
             long LeftSide = 0;
 
-            for (int x = 0; x <= A.Length - 1; x++)
+            return CalculateEquilibrium(A, ref RightSide, ref LeftSide);
+        }
+
+        private static int CalculateEquilibrium(int[] A, ref long RightSide, ref long LeftSide)
+        {
+            for (int index = 0; index < A.Length; index++)
             {
-                RightSide -= A[x];
+                RightSide -= A[index];
 
                 if (RightSide == LeftSide)
                 {
-                    return x;
+                    return index;
                 }
-                LeftSide += A[x];
+                LeftSide += A[index];
             }
             return -1;
         }

@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using Output;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace MiscExercises
 {
@@ -32,11 +33,7 @@ namespace MiscExercises
         private static void ListDisplay(string action_description, List<int> value)
         {
             Console.Write(action_description);
-            for (int y = 0; y <= value.Count - 1; y++)
-            {
-                Console.Write(value[y]);
-            }
-            Console.WriteLine();
+            ConsoleListOutput.DisplayListSingleLineWrap(value, ", ");
         }
 
         private static List<int> GetValuesLessThan(int value, List<int> input)

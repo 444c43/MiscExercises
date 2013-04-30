@@ -8,7 +8,7 @@ namespace MiscExercises
 {
     public class FactorialRecursion
     {
-        public static long FindFactorial(long val)
+        public static long FindFactorial(int val)
         {
             while (val > 1)
             {

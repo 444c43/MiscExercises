@@ -8,10 +8,10 @@ namespace MiscExercisesUnitTests
     public class EquilibriumTests
     {
         [TestMethod]
-        public void TestResult()
+        public void TestEquilibriumFindsFirst()
         {
             int[] TestArray = new int[] { -7, 1, 5, 2, -4, 3, 0 };
-            int Result = Equilibrium.FindFirst(TestArray);
+            int Result = Equilibrium.FindFirstEquilibrium(TestArray);
 
             Assert.AreEqual(Result, 3);
         }
