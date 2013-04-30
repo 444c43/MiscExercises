@@ -25,17 +25,16 @@ namespace MiscExercises
             BuildConjectureList(2);
         }
         
-<<<<<<< HEAD
         /// <summary>
         /// enter starting number to calculate
         /// </summary>
         /// <param name="initialNum"></param>
-=======
+        
         // Tell me about the motivations behind this constructor.
         // Perhaps...
         // public CollatzConjecture() : this(1) { }
         // This would help ensure the Sequence property doesn't return null
-        public CollatzConjecture() { }
+        //public CollatzConjecture() { }
         
         // Your comment about this code being 'tightly copupled' is
         // unclear.  I read the SRP of this class as 
@@ -51,7 +50,6 @@ namespace MiscExercises
         // construction.  One could then inject into this base class the logic for
         // determining a sequence. I can imagine a couple pieces of such a refactoring,
         // and I have included comments below that show those pieces.
->>>>>>> b56131378525d1ce4fb12f24558ff436c6b83d43
         public CollatzConjecture(long initialNum)
         {
             Sequence = new List<long>();
@@ -100,9 +98,7 @@ namespace MiscExercises
             }
             return result;
         }
-<<<<<<< HEAD
         #endregion
-=======
 
         //private long _CalculateNextNumberInSequence(int currentNum)
         //{
@@ -114,6 +110,5 @@ namespace MiscExercises
         //{
         //    // Here you would query the termination condition that has been injected.
         //}
->>>>>>> b56131378525d1ce4fb12f24558ff436c6b83d43
     }
 }
