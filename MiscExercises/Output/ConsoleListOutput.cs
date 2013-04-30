@@ -9,39 +9,40 @@ namespace Output
     class ConsoleListOutput
     {
         /// <summary>
-        /// prints to console, including a separator (characters and spaces)
+        /// writes each item to single line, including a separator (characters
+        /// and spaces)
         /// </summary>
         /// <param name="list"></param>
         /// <param name="separator"></param>
-        public static void WrapSingleLine<T>(List<T> list, string separator)
+        public static void DisplayListSingleLineWrap<T>(List<T> list, string separator)
         {
             for (int index = 0; index < list.Count; index++)
             {
-                Console.Write(list[index]);
-                if (index != list.Count - 1)
-                {
-                    Console.Write(separator);
-                }
+                WriteList<T>(list, separator, index);
             }
             Console.WriteLine();
         }
 
-        public static void Write(long[] numbers, string seperator)
+        private static void WriteList<T>(List<T> list, string separator, int index)
         {
-            Console.Write(string.Join(seperator, numbers));
+            Console.Write(list[index]);
+            if (index != list.Count - 1)
+            {
+                Console.Write(separator);
+            }
         }
 
-        public static void MultiLine(List<long> list)
+        /// <summary>
+        /// writes each item to new line
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        public static void DisplayListMultiLine<T>(List<T> list)
         {
             for (int x = 0; x <= list.Count - 1; x++)
             {
                 Console.WriteLine(list[x]);
             }
-        }
-        
-        public static void WriteLines(long[] numbers)
-        {
-            Write(numbers, Environment.NewLine);
         }
     }
 }

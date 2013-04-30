@@ -25,7 +25,7 @@ namespace MiscExercises
         static void CollatzSolution()
         {
             CollatzConjecture NewConjecture = new CollatzConjecture(27);
-            ConsoleListOutput.WrapSingleLine(NewConjecture.Sequence, ", ");
+            ConsoleListOutput.DisplayListSingleLineWrap(NewConjecture.Sequence, ", ");
             Console.WriteLine("Total sequence count: {0}", NewConjecture.Sequence.Count);
         }
     }
