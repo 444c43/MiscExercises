@@ -20,10 +20,7 @@ namespace MiscExercises
         /// <summary>
         /// default parameter value is 1
         /// </summary>
-        public CollatzConjecture() 
-        {
-            BuildConjectureList(2);
-        }
+        public CollatzConjecture() :this(4){}
         
         /// <summary>
         /// enter starting number to calculate
@@ -52,29 +49,32 @@ namespace MiscExercises
         #region private methods
         private void BuildConjectureList(long currentNum)
         {
-            // Termination condition
-            // while (_SequenceShouldContine())
-            while (currentNum > 1)
+            while (ShouldCalculationContinue(currentNum))
             {
                 Sequence.Add(currentNum);
 
-                currentNum = CalculateConjecture(currentNum);
+                currentNum = CalculateNextSequenceNum(currentNum);
             }
             Sequence.Add(1);
         }
 
-        private long CalculateConjecture(long currentNum)
+        private long CalculateNextSequenceNum(long testValue)
         {
             long result;
-            if (currentNum % 2 == 0)
+            if (testValue % 2 == 0)
             {
-                result = currentNum / 2;
+                result = testValue / 2;
             }
             else
             {
-                result = (currentNum * 3) + 1;
+                result = (testValue * 3) + 1;
             }
             return result;
+        }
+
+        private bool ShouldCalculationContinue(long evaluatedNum)
+        {
+            return evaluatedNum > 1;
         }
         #endregion
     }

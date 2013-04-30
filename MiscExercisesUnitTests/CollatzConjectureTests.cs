@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using MiscExercises;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,7 +16,7 @@ namespace MiscExercisesUnitTests
         {
             Conjecture = new CollatzConjecture();
 
-            Assert.AreEqual(1, Conjecture.Sequence.Count);
+            Assert.AreEqual(3, Conjecture.Sequence.Count);
         }
 
         [TestMethod]
@@ -24,7 +25,7 @@ namespace MiscExercisesUnitTests
             Conjecture = new CollatzConjecture();
             List<long> CompareList = new List<long> { 4, 2, 1 };
 
-            Assert.AreEqual(true, CompareList.Equals(Conjecture));
+            Assert.IsTrue(CompareList.SequenceEqual(Conjecture.Sequence));
         }
 
         [TestMethod]
@@ -33,7 +34,7 @@ namespace MiscExercisesUnitTests
             Conjecture = new CollatzConjecture(6);
             List<long> CompareList = new List<long> { 6, 3, 10, 5, 16, 8, 4, 2, 1 };
 
-            Assert.AreEqual(true, CompareList.Equals(Conjecture));
+            Assert.AreEqual(true, CompareList.SequenceEqual(Conjecture.Sequence));
         }
     }
 }
