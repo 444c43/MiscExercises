@@ -56,8 +56,8 @@ namespace ListExtensions
 
         private static bool IsWithinBounds<T>(List<T> list, int firstIndex, int secondIndex)
         {
-            return firstIndex >= 0 && firstIndex < list.Count &&
-                            secondIndex >= 0 && secondIndex < list.Count;
+            return (firstIndex >= 0 && firstIndex < list.Count) &&
+                            (secondIndex >= 0 && secondIndex < list.Count);
         }
         #endregion
     }
