@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CollatzConjecture\CollatzConjecture.cs" />
     <Compile Include="EquilibriumIndices\Equilibrium.cs" />
+    <Compile Include="Extensions\StringValidations.cs" />
     <Compile Include="Output\ConsoleListOutput.cs" />
     <Compile Include="Recursion\FactorialRecursion.cs" />
     <Compile Include="ListManipulation\ListManipulation.cs" />
