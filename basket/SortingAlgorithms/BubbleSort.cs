@@ -9,17 +9,19 @@ namespace SortingAlgorithms
     public class BubbleSort
     {
         #region fields
-        private List<int> SortedList;
+        public List<int> SortedList {get; private set;}
         private bool IsSorted;
-        public int PassCount { get; private set; }
         #endregion
 
         #region constructor
         public BubbleSort()
         {
-            SortedList = new List<int>();
+        }
+
+        public BubbleSort(List<int> list)
+        {
+            SortedList = list;
             IsSorted = false;
-            PassCount = 0;
         }
         #endregion
 
@@ -27,11 +29,10 @@ namespace SortingAlgorithms
         {
             SortedList = list;
 
-            while (IsSorted == false)
+            while (!IsSorted)
             {
                 IsSorted = true;
                 IterateList();
-                PassCount++;
             }
             return SortedList;
         }
@@ -41,13 +42,13 @@ namespace SortingAlgorithms
         {
             for (int i = 1; i < SortedList.Count; i++)
             {
-                CompareListMembers(i);
+                CompareMembers(i);
             }
         }
 
-        private void CompareListMembers(int i)
+        private void CompareMembers(int i)
         {
-            if (SortedList[i] < SortedList[i - 1])
+            if (SortedList[i] > SortedList[i + 1])
             {
                 SortedList.Reverse(i - 1, 2);
                 IsSorted = false;
