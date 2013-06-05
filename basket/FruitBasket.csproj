@@ -63,12 +63,10 @@
     <Compile Include="SortingAlgorithms\HeapSort.cs" />
     <Compile Include="SortingAlgorithms\InsertionSort.cs" />
     <Compile Include="SortingAlgorithms\MergeSort.cs" />
-    <Compile Include="Output\ConsoleListOutput.cs" />
     <Compile Include="ListExtensions\PrimeNumberSieve.cs" />
     <Compile Include="SortingAlgorithms\QuickSort.cs" />
     <Compile Include="SortingAlgorithms\RadixSort.cs" />
     <Compile Include="Recursion\FactorialRecursion.cs" />
-    <Compile Include="ListManipulation\ListManipulation.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ListExtensions\SimpleShuffleAndSwap.cs" />
