@@ -1,8 +1,8 @@
 ﻿using System;
-using MiscExercises;
+using FruitBasket;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MiscExercisesUnitTests
+namespace FruitBasketTests
 {
     [TestClass]
     public class EquilibriumTests

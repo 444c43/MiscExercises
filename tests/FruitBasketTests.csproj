@@ -55,9 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MiscExercises\MiscExercises.csproj">
-      <Project>{5e237fca-d0c8-41ad-8d8a-68807f476ab8}</Project>
-      <Name>MiscExercises</Name>
+    <ProjectReference Include="..\basket\FruitBasket.csproj">
+      <Project>{ccdadd12-ad7a-4634-bd63-77b0e05151e1}</Project>
+      <Name>FruitBasket</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

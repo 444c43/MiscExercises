@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiscExercises
+namespace FruitBasket
 {
     public class CollatzConjecture
     {
         # region fields
-
         /// <summary>
         /// generated sequence listing from seed number
         /// </summary>
         public List<long> Sequence { get; private set; }
+        public long SeedNumber { get; private set; }
         #endregion
 
         #region constructors
@@ -25,12 +25,12 @@ namespace MiscExercises
         /// <summary>
         /// enter starting number to calculate
         /// </summary>
-        /// <param name="initialNum"></param>
+        /// <param name="seed_number"></param>
         
-        public CollatzConjecture(long initialNum)
+        public CollatzConjecture(long seed_number)
         {
             Sequence = new List<long>();
-            BuildConjectureList(initialNum);
+            BuildHailstoneList(seed_number);
         }
         #endregion
 
@@ -42,14 +42,14 @@ namespace MiscExercises
         public void EnterNewSeedNumber(long seedNum)
         {
             Sequence.Clear();
-            BuildConjectureList(seedNum);
+            BuildHailstoneList(seedNum);
         }
         #endregion
 
         #region private methods
-        private void BuildConjectureList(long currentNum)
+        private void BuildHailstoneList(long currentNum)
         {
-            while (ShouldCalculationContinue(currentNum))
+            while (currentNum > 1)
             {
                 Sequence.Add(currentNum);
 
@@ -58,23 +58,17 @@ namespace MiscExercises
             Sequence.Add(1);
         }
 
-        private long CalculateNextSequenceNum(long testValue)
+        private long CalculateNextSequenceNum(long current_num)
         {
-            long result;
-            if (testValue % 2 == 0)
+            if (current_num % 2 == 0)
             {
-                result = testValue / 2;
+                current_num = current_num / 2;
             }
             else
             {
-                result = (testValue * 3) + 1;
+                current_num = (current_num * 3) + 1;
             }
-            return result;
-        }
-
-        private bool ShouldCalculationContinue(long evaluatedNum)
-        {
-            return evaluatedNum > 1;
+            return current_num;
         }
         #endregion
     }

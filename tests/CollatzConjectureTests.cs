@@ -1,10 +1,10 @@
 ﻿using System;
+using FruitBasket;
 using System.Linq;
-using MiscExercises;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MiscExercisesUnitTests
+namespace FruitBasketTests
 {
     [TestClass]
     public class CollatzConjectureTests
