@@ -25,10 +25,8 @@ namespace SortingAlgorithms
         }
         #endregion
 
-        public List<int> SortList(List<int> list)
+        public List<int> SortList()
         {
-            SortedList = list;
-
             while (!IsSorted)
             {
                 IsSorted = true;
@@ -40,7 +38,7 @@ namespace SortingAlgorithms
         #region private methods
         private void IterateList()
         {
-            for (int i = 1; i < SortedList.Count; i++)
+            for (int i = 0; i < SortedList.Count - 1; i++)
             {
                 CompareMembers(i);
             }
@@ -50,7 +48,7 @@ namespace SortingAlgorithms
         {
             if (SortedList[i] > SortedList[i + 1])
             {
-                SortedList.Reverse(i - 1, 2);
+                SortedList.Reverse(i, 2);
                 IsSorted = false;
             }
         }

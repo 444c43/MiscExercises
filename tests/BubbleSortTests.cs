@@ -18,6 +18,7 @@ namespace MiscExercisesUnitTests
         public void TestSortResult()
         {
             Sort = new BubbleSort(ListToSort);
+            Sort.SortList();
 
             Assert.IsTrue(CompareList.SequenceEqual(Sort.SortedList));
         }
