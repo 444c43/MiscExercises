@@ -27,6 +27,7 @@ namespace SortingAlgorithms
             }
         }
 
+        #region private methods
         private void Insert(int index)
         {
             int value = base.SortedList[index];
@@ -37,5 +38,6 @@ namespace SortingAlgorithms
                 i -= 1;
             }
         }
+        #endregion
     }
 }
