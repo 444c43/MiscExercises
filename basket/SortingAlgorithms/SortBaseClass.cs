@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FruitBasket.SortingAlgorithms
+namespace SortingAlgorithms
 {
-    class SortBaseClass
+    public class SortBaseClass
     {
         #region fields
-        public List<int> SortedList { get; private set; }
+        public List<int> SortedList { get; protected set; }
         #endregion
 
         #region constructors
@@ -34,7 +34,5 @@ namespace FruitBasket.SortingAlgorithms
             SortedList = list;
         }
         #endregion
-
-
     }
 }

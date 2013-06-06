@@ -6,26 +6,22 @@ using System.Threading.Tasks;
 
 namespace SortingAlgorithms
 {
-    public class InsertionSort
+    public class InsertionSort : SortBaseClass
     {
-        #region fields
-        public List<int> SortedList { get; private set; }
-        #endregion
-
         #region constructors
         public InsertionSort()
         {
         }
 
-        public InsertionSort(List<int> list)
+        public InsertionSort(List<int> list):base()
         {
-            SortedList = list;
+            base.SortedList = list;
         }
         #endregion
 
-        public void SortList()
+        public override void SortList()
         {
-            for (int index = 1; index < SortedList.Count; index++)
+            for (int index = 1; index < base.SortedList.Count; index++)
             {
                 Insert(index);
             }
@@ -33,11 +29,11 @@ namespace SortingAlgorithms
 
         private void Insert(int index)
         {
-            int value = SortedList[index];
+            int value = base.SortedList[index];
             int i = index - 1;
-            while (i >= 0 && value < SortedList[i])
+            while (i >= 0 && value < base.SortedList[i])
             {
-                SortedList.Reverse(i, 2);
+                base.SortedList.Reverse(i, 2);
                 i -= 1;
             }
         }
