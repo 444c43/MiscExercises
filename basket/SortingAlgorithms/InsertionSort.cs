@@ -25,22 +25,21 @@ namespace SortingAlgorithms
 
         public void SortList()
         {
-            IterateList(SortedList);
+            for (int index = 1; index < SortedList.Count; index++)
+            {
+                Insert(index);
+            }
         }
 
-        private List<int> IterateList(List<int> list)
+        private void Insert(int index)
         {
-            for (int index = 1; index < list.Count; index++)
+            int value = SortedList[index];
+            int i = index - 1;
+            while (i >= 0 && value < SortedList[i])
             {
-                int value = list[index];
-                int i = index - 1;
-                while (i >= 0 && value < list[i])
-                {
-                    list.Reverse(i, 2);
-                    i -= 1;
-                }
+                SortedList.Reverse(i, 2);
+                i -= 1;
             }
-            return list;
         }
     }
 }
