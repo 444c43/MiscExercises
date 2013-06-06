@@ -8,18 +8,35 @@ namespace SortingAlgorithms
 {
     public class InsertionSort
     {
-        public static List<int> IterateList(List<int> list)
+        #region fields
+        public List<int> SortedList { get; private set; }
+        #endregion
+
+        #region constructors
+        public InsertionSort()
         {
-            for (int iterate = 1; iterate < list.Count; iterate++)
+        }
+
+        public InsertionSort(List<int> list)
+        {
+            SortedList = list;
+        }
+        #endregion
+
+        public void SortList()
+        {
+            IterateList(SortedList);
+        }
+
+        private List<int> IterateList(List<int> list)
+        {
+            for (int index = 1; index < list.Count; index++)
             {
-                int value = list[iterate];
-                int i = iterate - 1;
-                while (i >= 0)
+                int value = list[index];
+                int i = index - 1;
+                while (i >= 0 && value < list[i])
                 {
-                    if (value < list[i])
-                    {
-                        list.Reverse(i, 2);
-                    }
+                    list.Reverse(i, 2);
                     i -= 1;
                 }
             }

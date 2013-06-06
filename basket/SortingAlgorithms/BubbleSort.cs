@@ -13,7 +13,7 @@ namespace SortingAlgorithms
         private bool IsSorted;
         #endregion
 
-        #region constructor
+        #region constructors
         public BubbleSort()
         {
         }
