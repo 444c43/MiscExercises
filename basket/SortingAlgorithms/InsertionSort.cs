@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortingAlgorithms
 {
-    class InsertionSort
+    public class InsertionSort
     {
     }
 }

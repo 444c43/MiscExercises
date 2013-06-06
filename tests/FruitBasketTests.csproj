@@ -54,6 +54,7 @@
     <Compile Include="EquilibriumTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BubbleSortTests.cs" />
+    <Compile Include="InsertionSortTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\basket\FruitBasket.csproj">
