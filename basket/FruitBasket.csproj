@@ -71,6 +71,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ListExtensions\SimpleShuffleAndSwap.cs" />
     <Compile Include="SortingAlgorithms\SelectSort.cs" />
+    <Compile Include="SortingAlgorithms\SortBaseClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
